@@ -46,5 +46,17 @@ namespace NDS_Header_Reader
         {
             return ((128000 << deviceCapacity) / 1000000.0).ToString("n2") + " MB";
         }
+        
+        public static string GetHexFromBytes(byte[] bytes)
+        {
+            string completeHex = "";
+
+            foreach(byte b in bytes)
+            {
+                completeHex += $"{b:X}";
+            }
+
+            return completeHex;
+        }
     }
 }
