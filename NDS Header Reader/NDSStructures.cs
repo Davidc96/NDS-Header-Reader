@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,5 +59,61 @@ namespace NDS_Header_Reader
         public ushort NintendoLogoCRC;
         public ushort HeaderCRC;
         public byte[] DebbugerReserved;
+    }
+
+    public struct NDSiHeader
+    {
+        public byte[] GlobalMBK1MBK5Settings;
+        public byte[] LocalMBK6MBK8SettingsARM9;
+        public byte[] LocalMBK6MBK8SettingsARM7;
+        public uint GlobalMBK9Setting;
+
+        public uint RegionFlags;
+        public uint AccessControl;
+        public uint ARM7SCFGEXTMask;
+        public uint ReservedFlags;
+
+        public uint ARM9iOffset;
+        public uint Reserved;
+        public uint ARM9iLoadAddress;
+        public uint ARM9iSize;
+        public uint ARM7iOffset;
+        public uint UnknownPointer;
+        public uint ARM7iLoadAddress;
+        public uint ARM7iSize;
+
+        public uint DigestNTRRegionOffset;
+        public uint DigestNTRRegionLength;
+        public uint DigestTWLRegionOffset;
+        public uint DigestTWLRegionLength;
+        public uint DigestSectorHashtableOffset;
+        public uint DigestSectorHashtableLength;
+        public uint DigestBlockHashtableOffset;
+        public uint DigestBlockHashtableLength;
+        public uint DigestSectorSize;
+        public uint DigestBlockSectorCount;
+
+        public uint IconBannerSize;
+        public uint Unknwown;
+        public uint NTRTWLRegionROMSize;
+        public byte[] Unknown2;
+
+        public uint ModCryptArea1Offset;
+        public uint ModCryptArea1Size;
+        public uint ModCryptArea2Offset;
+        public uint ModCryptArea2Size;
+
+        public ulong TitleID;
+        public uint DSiWarePublicSavSize;
+        public uint DSiWarePrivateSavSize;
+        public byte[] ReservedZero;
+        public byte[] Unknown3;
+
+        public byte[] ARM9iSHA1HMACHash;
+        public byte[] ARM7iSHA1HMACHash;
+        public byte[] DigestMasterSHA1HMACHash;
+        public byte[] BannerSHA1HMACHFlash;
+        public byte[] ARM9iDecryptedSHA1HMACHash;
+        public byte[] ARM7iDecryptedSHA1HMACHash;
     }
 }
