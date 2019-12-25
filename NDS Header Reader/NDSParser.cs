@@ -218,9 +218,9 @@ namespace NDS_Header_Reader
         {
             Console.WriteLine("-------------- DSI SETTINGS INFORMATION ------------------");
             Console.WriteLine("");
-            Console.WriteLine("GLOBAL MBK1 - MBK5 SETTINGS:     " + Utility.GetBinary(ndsiHeader.GlobalMBK1MBK5Settings));
-            Console.WriteLine("LOCAL MBK6 - MBK8 SETTINGS ARM9: " + Utility.GetBinary(ndsiHeader.LocalMBK6MBK8SettingsARM9));
-            Console.WriteLine("LOCAL MBK6 - MBK8 SETTINGS ARM7: " + Utility.GetBinary(ndsiHeader.LocalMBK6MBK8SettingsARM7));
+            Console.WriteLine("GLOBAL MBK1 - MBK5 SETTINGS:     " + Utility.GetHexFromBytes(ndsiHeader.GlobalMBK1MBK5Settings));
+            Console.WriteLine("LOCAL MBK6 - MBK8 SETTINGS ARM9: " + Utility.GetHexFromBytes(ndsiHeader.LocalMBK6MBK8SettingsARM9));
+            Console.WriteLine("LOCAL MBK6 - MBK8 SETTINGS ARM7: " + Utility.GetHexFromBytes(ndsiHeader.LocalMBK6MBK8SettingsARM7));
             Console.WriteLine("GLOBAL MBK9 SETTINGS:            " + $"0x{ndsiHeader.GlobalMBK9Setting:X}");
             Console.WriteLine("");
         }
